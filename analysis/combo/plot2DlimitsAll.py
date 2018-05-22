@@ -209,9 +209,14 @@ def run(opts):
 
   # --- legend and extra text box
   x1 = 0.18
-  y1 = 0.65
-  x2 = x1+0.45
-  y2 = y1+0.25
+  y1 = 0.55
+  x2 = x1+0.42
+  y2 = y1+0.35
+  # --- add white box below bary
+  white = ROOT.TPaveText(x1,y1,x2,y2,"NDC")
+  white.AddText("")
+  white.SetFillColor(0)
+  white.Draw("SAME")
   # --- latex
   if model=="2HDM":  txt1 = "#bf{Z'-2HDM}"
   if model=="BARY":  txt1 = "#bf{Baryonic Z'}"
@@ -219,23 +224,23 @@ def run(opts):
   if which=='gg':    txt1 += "(#gamma#gamma)}"
   if which=='tt':    txt1 += "(#tau#tau)} "
   if which=='combo': txt1 += "(#gamma#gamma + #tau#tau)}"
-  if model=="2HDM":  txt2 = "#bf{Dirac DM, m_{#chi} = 100 GeV, g_{Z'} = 0.8, g_{#chi} = 1.0}"
-  if model=="BARY":  txt2 = "#bf{Dirac DM, g_{q} = 0.25, g_{#chi} = 1.0 }" 
+  if model=="2HDM":  txt2 = "#bf{Dirac DM, m_{#chi} = 100 GeV}"
+  if model=="BARY":  txt2 = "#bf{Dirac DM, g_{q} = 0.25, g_{#chi} = 1.0 }"
+  if model=="2HDM":  txt3 = "#bf{g_{Z'} = 0.8, g_{#chi} = 1.0}"
+  if model=="BARY":  txt3 = "" 
   txt = ROOT.TPaveText(x1,y1+0.15,x2,y2,"NDC")
   txt.AddText(txt1)
   txt.AddText(txt2)
-  txt.SetFillColor(0)
+  txt.AddText(txt3)
   txt.SetTextAlign(12)
-  txt.SetTextSize(0.03)
+  txt.SetTextSize(0.04)
   txt.Draw("SAME")
   # --- legend
-  leg = ROOT.TLegend(x1,y1,x2,y1+0.15)
-  #leg.SetHeader(text)
+  if model=="2HDM": leg = ROOT.TLegend(x1,y1,x2,y1+0.15)
+  if model=="BARY": leg = ROOT.TLegend(x1,y1+0.05,x2,y1+0.2)
   leg.SetBorderSize(0)
-  leg.SetFillColor(0)
-  #leg.SetFillStyle(0)
   leg.SetTextFont(42)
-  leg.SetTextSize(0.030)
+  leg.SetTextSize(0.040)
   leg.AddEntry(limitPlotObs,"Observed 95% CL","L")
   leg.AddEntry(limitPlot,"Expected 95% CL","L")
   leg.AddEntry(limitPlotUp,"#pm 1 s.d.","L")
