@@ -9,9 +9,9 @@ import plotting_interp as plot
 ROOT.gROOT.SetBatch(ROOT.kTRUE)
 plot.ModTDRStyle()
 
-def run(model,m1,outdir):
+def run(model,m1,outdir,suffix):
  
-  addtxt = ''
+  addtxt = suffix 
   do_prel = False # Write "Preliminary" on plots  
 
   channels = []
@@ -42,9 +42,21 @@ def run(model,m1,outdir):
   wgt['tt'] = 1.0 
   wgt['cm'] = 1.0 
 
-  if (model=="2HDM"): m2 = [450,500,550,600,700,750,800,850,900,950,1000,1050,1100,1150,1200,1250,1300,1400,1450,1500,1600,1650,1700,1750,1800,1850,1900,1950]
-  if (model=="BARY"): m2 = [10,20,30,40,50,75,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000]
+  if (model=="2HDM"): m2o = [450,500,550,600,700,750,800,850,900,950,1000,1050,1100,1150,1200,1250,1300,1400,1450,1500,1600,1650,1700,1750,1800,1850,1900,1950,2000]
+  if (model=="BARY"): m2o = [10,20,30,40,50,75,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000]
 
+  m2 = []
+  for m in m2o:
+    # remove files that either tautau or gamgam do not have
+    filename_tt=filepath['tt']+'Zprime'+str(m)+'A'+m1+'.json'
+    if (model=="BARY"): filename_gg=filepath['gg']+'Zprime'+str(m)+'DM'+m1+'.json'
+    else:               filename_gg=filepath['gg']+'Zprime'+str(m)+'A'+m1+'.json'
+    if os.path.isfile(filename_gg):
+      if os.path.isfile(filename_tt):
+        m2.append(m)
+      else:  print 'File '+filename_tt+' NOT found'
+    else: print 'File '+filename_gg+' NOT found'
+    
   # read in theoretical xsec
   if (model=="2HDM"): xsecfile = open('crosssectionZp2HDM.txt','r')
   if (model=="BARY"): xsecfile = open('crosssectionZpBaryonic.txt','r') 
@@ -80,7 +92,7 @@ def run(model,m1,outdir):
     # axis names
     tgraphs_the[c].SetTitle("")
     tgraphs_the[c].GetXaxis().SetTitle("m_{Z'} [GeV]")
-    if (model=="2HDM"): tgraphs_the[c].GetYaxis().SetTitle("#sigma(pp #rightarrow Z' #rightarrow Ah) [pb]")
+    if (model=="2HDM"): tgraphs_the[c].GetYaxis().SetTitle("#sigma(pp #rightarrow Z' #rightarrow #chi#chi h) [pb]")
     if (model=="BARY"): tgraphs_the[c].GetYaxis().SetTitle("#sigma(pp #rightarrow Z' #rightarrow #chi#chi h) [pb]")
     #tgraphs_the[c].GetYaxis().SetTitleOffset(0.9)
 
@@ -119,11 +131,13 @@ def run(model,m1,outdir):
  
   # plot   
   ROOT.gStyle.SetOptStat(0)
+
   c = ROOT.TCanvas('','')
   c.SetLeftMargin(0.15)
   c.SetLogx(1)
   c.SetLogy(1)
   #c.SetGrid()
+  c.SetTicks()
 
   # draw graphs
   # theory
@@ -132,7 +146,9 @@ def run(model,m1,outdir):
   tgraphs_the[channels[0]].GetXaxis().SetMoreLogLabels()
   tgraphs_the[channels[0]].GetXaxis().SetNoExponent()
   if (model=="2HDM"): tgraphs_the[channels[0]].GetXaxis().SetRangeUser(450,2000)
+  if (model=="BARY"): tgraphs_the[channels[0]].GetXaxis().SetRangeUser(50,2000)
   tgraphs_the[channels[0]].Draw("AC")
+
   # draw 1sig bands first 
   if ('tt' in channels): tgraphs_1si['tt'].Draw("F SAME")
   if ('gg' in channels): tgraphs_1si['gg'].Draw("F SAME")
@@ -158,8 +174,6 @@ def run(model,m1,outdir):
   styletext.Draw("SAME")
 
   # legend
-  #if (model=="2HDM"): leg = ROOT.TLegend(0.60, 0.60, 0.89, 0.90)
-  #if (model=="BARY"): leg = ROOT.TLegend(0.20, 0.20, 0.60, 0.50)
   if (model=="2HDM"): leg = ROOT.TLegend(0.60, 0.70, 0.89, 0.90)
   if (model=="BARY"): leg = ROOT.TLegend(0.20, 0.30, 0.60, 0.50)
   leg.SetFillColor(0)
@@ -181,6 +195,19 @@ def run(model,m1,outdir):
   latex.SetTextSize(0.035)
   latex.Draw("SAME") 
 
+ 
+  #extra_tick_y = c.GetFrame().GetY1()
+  #ybin_1500    = tgraphs_the[channels[0]].GetXaxis().FindBin(1500)
+  #extra_tick_x = tgraphs_the[channels[0]].GetXaxis().GetBinCenterLog(ybin_1500)
+  #extra_tick_txt = "#bf{1500}"
+  #print extra_tick_x
+  #print extra_tick_y
+  #extra_tick = ROOT.TLatex(0.6,0.6,extra_tick_txt)
+  #extra_tick.SetNDC()
+  #extra_tick.SetTextAlign(12) # align left
+  #extra_tick.SetTextSize(0.04)
+  #extra_tick.Draw("SAME") 
+ 
   # save plot
   leg.Draw("SAME")
 
@@ -195,6 +222,11 @@ def run(model,m1,outdir):
   prel.SetTextAlign(12)
   prel.SetTextSize(0.035)
   if (do_prel): prel.Draw("SAME")
+  lumi = ROOT.TLatex(0.715,0.97,"#bf{35.9 fb^{-1} (13 TeV)}")
+  lumi.SetNDC() 
+  lumi.SetTextAlign(12)
+  lumi.SetTextSize(0.035)
+  lumi.Draw("SAME")
   #CMS_lumi(c,4,10)
   c.RedrawAxis() 
   c.Print(outdir+"limits1D_"+model+addtxt+".pdf")
@@ -271,5 +303,7 @@ if __name__=="__main__":
   outdir = sys.argv[1]
   model  = sys.argv[2]
   m1     = sys.argv[3]
-  
-  run(model,m1,outdir)
+  if len(sys.argv)==5: suffix = sys.argv[4]
+  else:                suffix = ''
+ 
+  run(model,m1,outdir,suffix)
