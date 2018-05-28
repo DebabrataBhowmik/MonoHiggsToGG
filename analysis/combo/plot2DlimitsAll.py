@@ -61,8 +61,10 @@ def run(opts):
     A=[300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675]
     Z=[450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,1250,1300,1350,1400,1450,1500,1550,1600,1650,1700,1750,1800,1850,1900,1950]
   if model=="BARY":
-    A=[1,35,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850,875,900,925,950,975,1000]
-    Z=[10,50,100,200,250,300,350,400,450,500,550,600,675,750,800,850,900,950,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000]
+    #A=[1,35,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850,875,900,925,950,975,1000]
+    A=[1,35,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850,900,925,950,975,1000]
+    #Z=[10,50,100,200,250,300,350,400,450,500,550,600,675,750,800,850,900,950,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000]
+    Z=[10,50,100,200,250,300,350,400,450,500,550,600,650,700,900,950,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000]
 
   # --- binning for BARY model
   # Y axis
@@ -168,6 +170,25 @@ def run(opts):
   if model=="2HDM": limitPlotAxis.GetYaxis().SetNdivisions(8)
   if model=="BARY": limitPlotAxis.GetXaxis().SetNdivisions(10)
   if model=="BARY": limitPlotAxis.GetYaxis().SetNdivisions(16)
+
+  # --- smooth 
+  if dosmth:
+    limitPlot.GetXaxis().SetRange(3,limitPlot.GetNbinsX())
+    limitPlot.Smooth(1,smthfnc)
+    limitPlotObsCopy.GetXaxis().SetRange(3,limitPlotObsCopy.GetNbinsX())
+    limitPlotObsCopy.Smooth(1,smthfnc)
+    limitPlotUp.GetXaxis().SetRange(3,limitPlotUp.GetNbinsX())
+    limitPlotUp.Smooth(1,smthfnc)
+    limitPlotDown.GetXaxis().SetRange(3,limitPlotDown.GetNbinsX())
+    limitPlotDown.Smooth(1,smthfnc)
+    limitPlot.GetXaxis().SetRange(0,limitPlot.GetNbinsX())
+    limitPlotObsCopy.GetXaxis().SetRange(0,limitPlotObsCopy.GetNbinsX())
+    limitPlotUp.GetXaxis().SetRange(0,limitPlotUp.GetNbinsX())
+    limitPlotDown.GetXaxis().SetRange(0,limitPlotDown.GetNbinsX())
+    #limitPlot.Smooth(1,smthfnc)
+    #limitPlotObsCopy.Smooth(1,smthfnc)
+    #limitPlotUp.Smooth(1,smthfnc)
+    #limitPlotDown.Smooth(1,smthfnc)
  
   # --- get and style each contour
   # 1 sigma up 
@@ -190,14 +211,6 @@ def run(opts):
   limitPlot.SetContour(1)
   limitPlot.SetLineStyle(7)
   limitPlot.SetLineWidth(3)
-
-  # --- smooth 
-  if dosmth:
-    limitPlot.Smooth(1,smthfnc)
-    #limitPlotObs.Smooth(1,smthfnc)
-    limitPlotObsCopy.Smooth(1,smthfnc)
-    limitPlotUp.Smooth(1,smthfnc)
-    limitPlotDown.Smooth(1,smthfnc)
 
   # --- draw plots
   limitPlotAxis.Draw("COLZ") 
