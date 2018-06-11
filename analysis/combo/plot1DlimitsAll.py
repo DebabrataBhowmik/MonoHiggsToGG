@@ -91,7 +91,7 @@ def run(model,m1,outdir,suffix):
     # read in jsons and setup graphs 
     tgraphs_the[c],tgraphs_exp[c],tgraphs_obs[c],tgraphs_1si[c],tgraphs_2si[c] = setupGraph(c,model,m1,m2,mstr,xsecs,wgt[c],filepath[c])
     # axis names
-    tgraphs_the[c].SetTitle("")
+  #  tgraphs_the[c].SetTitle("")
     tgraphs_the[c].GetXaxis().SetTitle("m_{Z'} [GeV]")
     if (model=="2HDM"): tgraphs_the[c].GetYaxis().SetTitle("#sigma(pp #rightarrow Z' #rightarrow #chi#chi h) [pb]")
     if (model=="BARY"): tgraphs_the[c].GetYaxis().SetTitle("#sigma(pp #rightarrow Z' #rightarrow #chi#chi h) [pb]")
@@ -168,16 +168,17 @@ def run(model,m1,outdir,suffix):
 
   # text about styling
   styletxt  = "#splitline{#bf{Solid (dashed) lines: observed (expected) 95% CL}}{#bf{Shaded band: #pm 1 s.d. on expected}}"
-  styletext = ROOT.TLatex(0.18,0.20,styletxt)
+  styletext = ROOT.TLatex(0.18,0.18,styletxt)
   styletext.SetNDC()
   styletext.SetTextAlign(12) 
   styletext.SetTextSize(0.035)
   styletext.Draw("SAME")
 
   # legend
-  if (model=="2HDM"): leg = ROOT.TLegend(0.60, 0.70, 0.89, 0.90)
-  if (model=="BARY"): leg = ROOT.TLegend(0.20, 0.30, 0.60, 0.50)
-  leg.SetFillColor(0)
+  if (model=="2HDM"): leg = ROOT.TLegend(0.60, 0.70, 0.90, 0.90)
+  if (model=="BARY"): leg = ROOT.TLegend(0.20, 0.30, 0.50, 0.50)
+  leg.SetFillColor(0) # fill legend white
+  leg.SetFillStyle(0) # no fill for legend
   leg.AddEntry(tgraphs_the[channels[0]],"#sigma_{th}", "L")
   #leg.AddEntry(tgraphs_test_obs,'Observed', 'L')
   #leg.AddEntry(tgraphs_test_exp,'Expected #pm 1 s.d.', 'LF')
@@ -187,8 +188,10 @@ def run(model,m1,outdir,suffix):
     #leg.AddEntry(tgraphs_exp[chan],text[chan]+' expected #pm 1 std. dev.', 'LF')
 
   # latex label
-  if (model=="2HDM"): text = "#splitline{#bf{Z'-2HDM, Dirac DM}}{#splitline{#bf{m_{A} = 300 GeV, m_{#chi} = 100 GeV}}{#bf{g_{Z'} = 0.8, g_{#chi} = 1}}}"
-  if (model=="BARY"): text = "#bf{Baryonic Z', Dirac DM, g_{q} = 0.25, g_{#chi} = 1, m_{#chi} = 1 GeV}"
+  #if (model=="2HDM"): text = "#splitline{#bf{Z'-2HDM, Dirac DM}}{#splitline{#bf{m_{A} = 300 GeV, m_{#chi} = 100 GeV}}{#bf{g_{Z'} = 0.8, g_{#chi} = 1}}}"
+  #if (model=="BARY"): text = "#bf{Baryonic Z', Dirac DM, g_{q} = 0.25, g_{#chi} = 1, m_{#chi} = 1 GeV}"
+  if (model=="2HDM"): text = "#splitline{#bf{Z'-2HDM, Dirac DM}}{#splitline{#bf{m_{A} = 300 GeV, m_{DM} = 100 GeV}}{#bf{g_{Z'} = 0.8, g_{DM} = 1}}}"
+  if (model=="BARY"): text = "#bf{Baryonic Z', Dirac DM, g_{q} = 0.25, g_{DM} = 1, m_{DM} = 1 GeV}"
   if (model=="2HDM"): latex = ROOT.TLatex(0.18,0.78,text)
   if (model=="BARY"): latex = ROOT.TLatex(0.18,0.84,text)
   latex.SetNDC()

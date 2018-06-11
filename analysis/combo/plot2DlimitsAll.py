@@ -61,9 +61,10 @@ def run(opts):
     A=[300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675]
     Z=[450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,1250,1300,1350,1400,1450,1500,1550,1600,1650,1700,1750,1800,1850,1900,1950]
   if model=="BARY":
-    #A=[1,35,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850,875,900,925,950,975,1000]
+    A=[1,35,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850,875,900,925,950,975,1000]
+    Z=[10,50,100,200,250,300,350,400,450,500,550,600,675,750,800,850,900,950,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000]
+  if model=="BARY" and which=='combo':
     A=[1,35,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850,900,925,950,975,1000]
-    #Z=[10,50,100,200,250,300,350,400,450,500,550,600,675,750,800,850,900,950,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000]
     Z=[10,50,100,200,250,300,350,400,450,500,550,600,650,700,900,950,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000]
 
   # --- binning for BARY model
@@ -147,7 +148,7 @@ def run(opts):
   limitPlotAxis.GetXaxis().SetTitle("m_{Z'} [GeV]")
   limitPlotObs.GetZaxis().SetTitle("#sigma_{95% CL}/#sigma_{th}")
   if model=="2HDM": limitPlotAxis.GetYaxis().SetTitle("m_{A} [GeV]")
-  if model=="BARY": limitPlotAxis.GetYaxis().SetTitle("m_{#chi} [GeV]")
+  if model=="BARY": limitPlotAxis.GetYaxis().SetTitle("m_{DM} [GeV]")
 
   # --- clone obs to get contour 
   limitPlotObsCopy = limitPlotObs.Clone()
@@ -237,9 +238,9 @@ def run(opts):
   if which=='gg':    txt1 += "(#gamma#gamma)}"
   if which=='tt':    txt1 += "(#tau#tau)} "
   if which=='combo': txt1 += "(#gamma#gamma + #tau#tau)}"
-  if model=="2HDM":  txt2 = "#bf{Dirac DM, m_{#chi} = 100 GeV}"
-  if model=="BARY":  txt2 = "#bf{Dirac DM, g_{q} = 0.25, g_{#chi} = 1.0 }"
-  if model=="2HDM":  txt3 = "#bf{g_{Z'} = 0.8, g_{#chi} = 1.0}"
+  if model=="2HDM":  txt2 = "#bf{Dirac DM, m_{DM} = 100 GeV}"
+  if model=="BARY":  txt2 = "#bf{Dirac DM, g_{q} = 0.25, g_{DM} = 1.0 }"
+  if model=="2HDM":  txt3 = "#bf{g_{Z'} = 0.8, g_{DM} = 1.0}"
   if model=="BARY":  txt3 = "" 
   txt = ROOT.TPaveText(x1,y1+0.15,x2,y2,"NDC")
   txt.AddText(txt1)
