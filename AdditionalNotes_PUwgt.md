@@ -15,7 +15,7 @@ Lumi Calculation:
 
 Get PU from Data (use processed_and_golden.json):
 * pileupCalc.py -i processed_and_golden.json --inputLumiJSON 
-/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/PileUp/pileup_latest.txt
+/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions16/13TeV/PileUp/pileup_latest.txt
 --calcMode true --minBiasXsec 69000 --maxPileupBin 52 --numPileupBins 52  MyDataPileupHistogram.root
 
 Get PU from MC:
