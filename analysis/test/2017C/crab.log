@@ -1,0 +1,42 @@
+DEBUG 2018-08-10 12:16:21,471: 	 Executing command: 'submit'
+DEBUG 2018-08-10 12:16:21,472: 	 Found CRAB cache file /afs/cern.ch/user/d/dbhowmik/.crab3
+DEBUG 2018-08-10 12:16:21,482: 	 Checking credentials
+DEBUG 2018-08-10 12:16:21,484: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-08-10 12:16:21,484: 	 Getting proxy life time left
+DEBUG 2018-08-10 12:16:22,713: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 43182
+
+ error: 
+ retcode : 0
+DEBUG 2018-08-10 12:16:23,824: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 43181
+
+ error: 
+ retcode : 0
+DEBUG 2018-08-10 12:16:23,824: 	 Proxy valid for 11:59:42 hours
+INFO 2018-08-10 12:16:23,825: 	 Will use CRAB configuration file Crabconfig.py
+DEBUG 2018-08-10 12:16:23,825: 	 Loading CRAB configuration file.
+ERROR 2018-08-10 12:16:24,165: 	 Error while loading CRAB configuration:
+name 'getUsernameFromSiteDB' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-08-10 12:16:24,165: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1805.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1805.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1805.patch1/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1805.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1805.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+name 'getUsernameFromSiteDB' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile

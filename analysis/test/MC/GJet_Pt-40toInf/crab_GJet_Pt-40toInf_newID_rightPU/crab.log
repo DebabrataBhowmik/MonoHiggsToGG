@@ -1,0 +1,187 @@
+Sample is MC
+ ##################################################################### 
+ # WARNING: the module CondCore.DBCommon.CondDBSetup is deprecated.  # 
+ # Please import CondCore.CondDB.CondDB_cfi                          # 
+ ##################################################################### 
+DEBUG 2018-12-22 16:35:54,479: 	 Executing command: 'submit'
+DEBUG 2018-12-22 16:35:54,481: 	 Found CRAB cache file /afs/cern.ch/user/d/dbhowmik/.crab3
+DEBUG 2018-12-22 16:35:54,497: 	 Checking credentials
+DEBUG 2018-12-22 16:35:54,500: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-12-22 16:35:54,500: 	 Getting proxy life time left
+DEBUG 2018-12-22 16:35:55,412: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 42935
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:35:56,222: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 42933
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:35:56,223: 	 Proxy lifetime 42935 secs is different from voms extension lifetime 42933 secs for proxy: /tmp/x509up_u91056
+DEBUG 2018-12-22 16:35:56,223: 	 Proxy valid for 11:55:33 hours
+INFO 2018-12-22 16:35:56,223: 	 Will use CRAB configuration file Crabconfig.py
+DEBUG 2018-12-22 16:35:56,223: 	 Loading CRAB configuration file.
+DEBUG 2018-12-22 16:35:56,234: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2018-12-22 16:35:56,359: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:35:56,360: 	 Checking credentials
+DEBUG 2018-12-22 16:35:56,360: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-12-22 16:35:56,360: 	 Getting proxy life time left
+DEBUG 2018-12-22 16:35:57,066: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 42933
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:35:57,776: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 42932
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:35:57,777: 	 Proxy lifetime 42933 secs is different from voms extension lifetime 42932 secs for proxy: /tmp/x509up_u91056
+DEBUG 2018-12-22 16:35:57,777: 	 Proxy valid for 11:55:32 hours
+DEBUG 2018-12-22 16:35:58,583: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u91056 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:35:59,495: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2018-12-22 16:35:59,611: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:35:59,611: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-12-22 16:35:59,611: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik_cmsweb.cern.ch for credential name
+DEBUG 2018-12-22 16:36:00,016: 	 Executing : 
+ command : myproxy-info -l c57cbe2bda088bac5d889483f42b8a5058d51971 -s myproxy.cern.ch
+ output : username: c57cbe2bda088bac5d889483f42b8a5058d51971
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 625:37:15  (26.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:36:00,018: 	 Myproxy is valid: 2252235
+DEBUG 2018-12-22 16:36:00,018: 	 Command use: submit
+DEBUG 2018-12-22 16:36:00,018: 	 Options use: ['-c', 'Crabconfig.py']
+DEBUG 2018-12-22 16:36:00,829: 	 CRABClient version: 3.3.1812
+DEBUG 2018-12-22 16:36:00,829: 	 Instance is prod
+DEBUG 2018-12-22 16:36:00,829: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-12-22 16:36:00,829: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-12-22 16:36:00,829: 	 Started submission
+DEBUG 2018-12-22 16:36:00,829: 	 Working on /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GJet_Pt-40toInf/crab_GJet_Pt-40toInf_newID_rightPU
+DEBUG 2018-12-22 16:36:01,721: 	 Loading required information from the environment
+DEBUG 2018-12-22 16:36:01,721: 	 Found CMSSW_9_4_6 for slc6_amd64_gcc630 with base /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6
+DEBUG 2018-12-22 16:36:01,721: 	 Loading required information from the environment
+DEBUG 2018-12-22 16:36:01,721: 	 Found CMSSW_9_4_6 for slc6_amd64_gcc630 with base /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6
+DEBUG 2018-12-22 16:36:01,744: 	 UNIQUE NAME: tarUUID b9c4e2d6-311a-4d7b-9e3f-4a7be0c720d1 
+DEBUG 2018-12-22 16:36:01,745: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.requestName = 'GJet_Pt-40toInf_newID_rightPU'
+config.section_('JobType')
+config.JobType.psetName = 'diPhoAna.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.inputFiles = ['input_files/transformation_Moriond17_AfterPreApr_v1.root', 'input_files/pu_Weights_GJet_Pt40toInf.root', 'input_files/Run2017_17Nov2017_v1_ele_smearings.dat', 'input_files/Run2017_17Nov2017_v1_ele_scales.dat']
+config.section_('Data')
+config.Data.inputDataset = '/GJet_Pt-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCP5_13TeV_Pythia8/sethzenz-RunIIFall17-3_1_0-3_1_0-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2-dfb4aebb0a34a36b04b8bd8eb2ddfe46/USER'
+config.Data.publication = False
+config.Data.unitsPerJob = 1
+config.Data.inputDBS = 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader'
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/dbhowmik/MHgg/Bkg/newID_rightPUweight/BkgGJet_Pt-40toInf_2017MC'
+config.section_('Site')
+config.Site.storageSite = 'T3_US_FNALLPC'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2018-12-22 16:36:01,745: 	 self.config.JobType.psetName: diPhoAna.py
+INFO 2018-12-22 16:36:01,745: 	 Importing CMSSW configuration diPhoAna.py
+INFO 2018-12-22 16:36:02,132: 	 Finished importing CMSSW configuration diPhoAna.py
+DEBUG 2018-12-22 16:36:02,132: 	 Writing CMSSW configuration to /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GJet_Pt-40toInf/crab_GJet_Pt-40toInf_newID_rightPU/inputs/PSet.py
+DEBUG 2018-12-22 16:36:02,188: 	 The following EDM output files will be collected: []
+DEBUG 2018-12-22 16:36:02,189: 	 The following TFile output files will be collected: ['diPhotons.root']
+DEBUG 2018-12-22 16:36:02,189: 	 The following user output files will be collected: []
+DEBUG 2018-12-22 16:36:02,189: 	 Loading required information from the environment
+DEBUG 2018-12-22 16:36:02,189: 	 Found CMSSW_9_4_6 for slc6_amd64_gcc630 with base /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6
+DEBUG 2018-12-22 16:36:02,189: 	 Making tarball in /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GJet_Pt-40toInf/crab_GJet_Pt-40toInf_newID_rightPU/inputs/b9c4e2d6-311a-4d7b-9e3f-4a7be0c720d1default.tgz
+DEBUG 2018-12-22 16:36:02,218: 	 Checking directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/lib
+DEBUG 2018-12-22 16:36:02,218: 	 Adding directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/lib to tarball
+DEBUG 2018-12-22 16:36:10,197: 	 Checking directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/biglib
+DEBUG 2018-12-22 16:36:10,197: 	 Adding directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/biglib to tarball
+DEBUG 2018-12-22 16:36:10,199: 	 Checking directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/module
+DEBUG 2018-12-22 16:36:10,247: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/DataFormats/interface to tarball
+DEBUG 2018-12-22 16:36:10,278: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/MetaData/data to tarball
+DEBUG 2018-12-22 16:36:25,278: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/MetaData/interface to tarball
+DEBUG 2018-12-22 16:36:25,294: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/MicroAOD/data to tarball
+DEBUG 2018-12-22 16:36:35,195: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/MicroAOD/interface to tarball
+DEBUG 2018-12-22 16:36:35,219: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/Systematics/data to tarball
+DEBUG 2018-12-22 16:36:37,012: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/Systematics/interface to tarball
+DEBUG 2018-12-22 16:36:37,032: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/Taggers/data to tarball
+DEBUG 2018-12-22 16:36:42,146: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/Taggers/interface to tarball
+DEBUG 2018-12-22 16:36:42,165: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/Validation/interface to tarball
+DEBUG 2018-12-22 16:36:42,168: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoJets/JetProducers/data to tarball
+DEBUG 2018-12-22 16:36:42,169: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoJets/JetProducers/interface to tarball
+DEBUG 2018-12-22 16:36:42,183: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/CommonTools/UtilAlgos/interface to tarball
+DEBUG 2018-12-22 16:36:42,220: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/CommonTools/RecoUtils/interface to tarball
+DEBUG 2018-12-22 16:36:42,231: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DataFormats/Common/interface to tarball
+DEBUG 2018-12-22 16:36:42,307: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DataFormats/Math/interface to tarball
+DEBUG 2018-12-22 16:36:42,323: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoEgamma/EgammaTools/data to tarball
+DEBUG 2018-12-22 16:36:42,344: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoEgamma/EgammaTools/interface to tarball
+DEBUG 2018-12-22 16:36:42,359: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoEgamma/EgammaPhotonProducers/interface to tarball
+DEBUG 2018-12-22 16:36:42,368: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoEgamma/ElectronIdentification/data to tarball
+DEBUG 2018-12-22 16:36:42,373: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoEgamma/ElectronIdentification/interface to tarball
+DEBUG 2018-12-22 16:36:42,388: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/EgammaAnalysis/ElectronTools/data to tarball
+DEBUG 2018-12-22 16:36:42,396: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/EgammaAnalysis/ElectronTools/interface to tarball
+DEBUG 2018-12-22 16:36:42,411: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/Calibration/HcalCalibAlgos/data to tarball
+DEBUG 2018-12-22 16:36:43,900: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/Calibration/HcalCalibAlgos/interface to tarball
+DEBUG 2018-12-22 16:36:43,906: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQM/Physics/interface to tarball
+DEBUG 2018-12-22 16:36:43,911: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQMOffline/JetMET/interface to tarball
+DEBUG 2018-12-22 16:36:43,933: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQMOffline/L1Trigger/interface to tarball
+DEBUG 2018-12-22 16:36:43,940: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQMOffline/Trigger/data to tarball
+DEBUG 2018-12-22 16:36:43,943: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQMOffline/Trigger/interface to tarball
+DEBUG 2018-12-22 16:36:43,985: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQMServices/Examples/interface to tarball
+DEBUG 2018-12-22 16:36:43,991: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/HLTriggerOffline/SUSYBSM/data to tarball
+DEBUG 2018-12-22 16:36:43,992: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/HLTriggerOffline/SUSYBSM/interface to tarball
+DEBUG 2018-12-22 16:36:44,003: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/PhysicsTools/NanoAOD/interface to tarball
+DEBUG 2018-12-22 16:36:44,006: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/PhysicsTools/PatAlgos/interface to tarball
+DEBUG 2018-12-22 16:36:44,027: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/PhysicsTools/PatUtils/data to tarball
+DEBUG 2018-12-22 16:36:44,268: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/PhysicsTools/PatUtils/interface to tarball
+DEBUG 2018-12-22 16:36:44,288: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoBTag/SoftLepton/interface to tarball
+DEBUG 2018-12-22 16:36:44,293: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoHI/HiEgammaAlgos/interface to tarball
+DEBUG 2018-12-22 16:36:44,301: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/GeneratorInterface/RivetInterface/data to tarball
+DEBUG 2018-12-22 16:36:44,315: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/GeneratorInterface/RivetInterface/interface to tarball
+DEBUG 2018-12-22 16:36:44,324: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/work/interface to tarball
+DEBUG 2018-12-22 16:36:44,378: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/data to tarball
+DEBUG 2018-12-22 16:36:44,379: 	 Adding file input_files/transformation_Moriond17_AfterPreApr_v1.root to tarball
+DEBUG 2018-12-22 16:36:44,419: 	 Adding file input_files/pu_Weights_GJet_Pt40toInf.root to tarball
+DEBUG 2018-12-22 16:36:44,423: 	 Adding file input_files/Run2017_17Nov2017_v1_ele_smearings.dat to tarball
+DEBUG 2018-12-22 16:36:44,430: 	 Adding file input_files/Run2017_17Nov2017_v1_ele_scales.dat to tarball
+DEBUG 2018-12-22 16:36:45,568: 	 Uploading archive /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GJet_Pt-40toInf/crab_GJet_Pt-40toInf_newID_rightPU/inputs/b9c4e2d6-311a-4d7b-9e3f-4a7be0c720d1default.tgz (96 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-12-22 16:37:21,764: 	 Loading required information from the environment
+DEBUG 2018-12-22 16:37:21,764: 	 Found CMSSW_9_4_6 for slc6_amd64_gcc630 with base /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6
+DEBUG 2018-12-22 16:37:21,764: 	 Making tarball in /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GJet_Pt-40toInf/crab_GJet_Pt-40toInf_newID_rightPU/inputs/debugFiles.tgz
+DEBUG 2018-12-22 16:37:21,770: 	 Uploading archive /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GJet_Pt-40toInf/crab_GJet_Pt-40toInf_newID_rightPU/inputs/debugFiles.tgz (3 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-12-22 16:37:22,629: 	 Result uploading input files: 8254d65d3c993c31ed94197f3d1e65a1dc75962d729dd5256941b3545db01a38.tar.gz 
+INFO 2018-12-22 16:37:22,630: 	 Sending the request to the server
+DEBUG 2018-12-22 16:37:22,631: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_FNALLPC', 'algoargs': 1, 'cachefilename': '8254d65d3c993c31ed94197f3d1e65a1dc75962d729dd5256941b3545db01a38.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_9_4_6', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/GJet_Pt-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCP5_13TeV_Pythia8/sethzenz-RunIIFall17-3_1_0-3_1_0-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2-dfb4aebb0a34a36b04b8bd8eb2ddfe46/USER', 'lfn': '/store/user/dbhowmik/MHgg/Bkg/newID_rightPUweight/BkgGJet_Pt-40toInf_2017MC', 'dryrun': 0, 'workflow': 'crab_GJet_Pt-40toInf_newID_rightPU', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 0, 'tfileoutfiles': ['diPhotons.root'], 'oneEventMode': 0, 'debugfilename': '6378652578afdf78e69ac216d2ec2092aa42291537cae5d8dcaf74aa2cc084cc.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc630', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2018-12-22 16:37:22,631: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T3_US_FNALLPC&algoargs=1&cachefilename=8254d65d3c993c31ed94197f3d1e65a1dc75962d729dd5256941b3545db01a38.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_9_4_6&primarydataset=&inputdata=%2FGJet_Pt-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCP5_13TeV_Pythia8%2Fsethzenz-RunIIFall17-3_1_0-3_1_0-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2-dfb4aebb0a34a36b04b8bd8eb2ddfe46%2FUSER&lfn=%2Fstore%2Fuser%2Fdbhowmik%2FMHgg%2FBkg%2FnewID_rightPUweight%2FBkgGJet_Pt-40toInf_2017MC&dryrun=0&workflow=crab_GJet_Pt-40toInf_newID_rightPU&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=6378652578afdf78e69ac216d2ec2092aa42291537cae5d8dcaf74aa2cc084cc.tar.gz&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc630&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&tfileoutfiles=diPhotons.root
+DEBUG 2018-12-22 16:37:23,959: 	 Result: {u'result': [{u'RequestName': u'181222_153723:dbhowmik_crab_GJet_Pt-40toInf_newID_rightPU'}]}
+INFO 2018-12-22 16:37:23,963: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2018-12-22 16:37:23,963: 	 Task name: 181222_153723:dbhowmik_crab_GJet_Pt-40toInf_newID_rightPU
+INFO 2018-12-22 16:37:23,963: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2018-12-22 16:37:23,963: 	 About to return
+INFO 2018-12-22 16:37:23,970: 	 Log file is /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GJet_Pt-40toInf/crab_GJet_Pt-40toInf_newID_rightPU/crab.log

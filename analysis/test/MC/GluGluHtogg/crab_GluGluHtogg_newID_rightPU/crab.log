@@ -1,0 +1,467 @@
+Sample is MC
+ ##################################################################### 
+ # WARNING: the module CondCore.DBCommon.CondDBSetup is deprecated.  # 
+ # Please import CondCore.CondDB.CondDB_cfi                          # 
+ ##################################################################### 
+DEBUG 2018-12-22 16:24:53,106: 	 Executing command: 'submit'
+DEBUG 2018-12-22 16:24:53,107: 	 Found CRAB cache file /afs/cern.ch/user/d/dbhowmik/.crab3
+DEBUG 2018-12-22 16:24:53,149: 	 Checking credentials
+DEBUG 2018-12-22 16:24:53,150: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-12-22 16:24:53,150: 	 Getting proxy life time left
+DEBUG 2018-12-22 16:24:53,754: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 43182
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:24:54,360: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 43181
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:24:54,361: 	 Proxy lifetime 43182 secs is different from voms extension lifetime 43181 secs for proxy: /tmp/x509up_u91056
+DEBUG 2018-12-22 16:24:54,361: 	 Proxy valid for 11:59:41 hours
+INFO 2018-12-22 16:24:54,361: 	 Will use CRAB configuration file Crabconfig.py
+DEBUG 2018-12-22 16:24:54,361: 	 Loading CRAB configuration file.
+DEBUG 2018-12-22 16:24:54,397: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2018-12-22 16:24:54,524: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:24:54,524: 	 Checking credentials
+DEBUG 2018-12-22 16:24:54,524: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-12-22 16:24:54,524: 	 Getting proxy life time left
+DEBUG 2018-12-22 16:24:55,130: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 43180
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:24:55,736: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 43180
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:24:55,736: 	 Proxy valid for 11:59:40 hours
+DEBUG 2018-12-22 16:24:56,442: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u91056 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:24:57,541: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2018-12-22 16:24:57,652: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:24:57,652: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-12-22 16:24:57,652: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik_cmsweb.cern.ch for credential name
+DEBUG 2018-12-22 16:24:58,057: 	 Executing : 
+ command : myproxy-info -l c57cbe2bda088bac5d889483f42b8a5058d51971 -s myproxy.cern.ch
+ output : username: c57cbe2bda088bac5d889483f42b8a5058d51971
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 625:48:16  (26.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:24:58,058: 	 Myproxy is valid: 2252896
+DEBUG 2018-12-22 16:24:58,058: 	 Command use: submit
+DEBUG 2018-12-22 16:24:58,058: 	 Options use: ['-c', 'Crabconfig.py']
+DEBUG 2018-12-22 16:24:58,986: 	 CRABClient version: 3.3.1812
+DEBUG 2018-12-22 16:24:58,987: 	 Instance is prod
+DEBUG 2018-12-22 16:24:58,987: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-12-22 16:24:58,987: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-12-22 16:24:58,987: 	 Started submission
+DEBUG 2018-12-22 16:24:58,987: 	 Working on /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU
+DEBUG 2018-12-22 16:24:59,976: 	 Loading required information from the environment
+DEBUG 2018-12-22 16:24:59,976: 	 Found CMSSW_9_4_6 for slc6_amd64_gcc630 with base /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6
+DEBUG 2018-12-22 16:24:59,976: 	 Loading required information from the environment
+DEBUG 2018-12-22 16:24:59,976: 	 Found CMSSW_9_4_6 for slc6_amd64_gcc630 with base /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6
+DEBUG 2018-12-22 16:25:00,005: 	 UNIQUE NAME: tarUUID 9ebba51e-bead-4188-a070-0cbb46d2612c 
+DEBUG 2018-12-22 16:25:00,006: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.requestName = 'GluGluHtogg_newID_rightPU'
+config.section_('JobType')
+config.JobType.psetName = 'diPhoAna.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.inputFiles = ['input_files/transformation_Moriond17_AfterPreApr_v1.root', 'input_files/pu_Weights_GluGluHToGG.root', 'input_files/Run2017_17Nov2017_v1_ele_smearings.dat', 'input_files/Run2017_17Nov2017_v1_ele_scales.dat']
+config.section_('Data')
+config.Data.inputDataset = '/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/sethzenz-RunIIFall17-3_1_0-3_1_0-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1-bb3ce3a7883249660e68d150a2fbef9a/USER'
+config.Data.publication = False
+config.Data.unitsPerJob = 1
+config.Data.inputDBS = 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader'
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/dbhowmik/MHgg/Bkg/newID_rightPUweight/BkgGluGluHtogg_2017MC'
+config.section_('Site')
+config.Site.storageSite = 'T3_US_FNALLPC'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2018-12-22 16:25:00,006: 	 self.config.JobType.psetName: diPhoAna.py
+INFO 2018-12-22 16:25:00,006: 	 Importing CMSSW configuration diPhoAna.py
+INFO 2018-12-22 16:25:01,363: 	 Finished importing CMSSW configuration diPhoAna.py
+DEBUG 2018-12-22 16:25:01,363: 	 Writing CMSSW configuration to /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU/inputs/PSet.py
+DEBUG 2018-12-22 16:25:01,410: 	 The following EDM output files will be collected: []
+DEBUG 2018-12-22 16:25:01,410: 	 The following TFile output files will be collected: ['diPhotons.root']
+DEBUG 2018-12-22 16:25:01,410: 	 The following user output files will be collected: []
+DEBUG 2018-12-22 16:25:01,410: 	 Loading required information from the environment
+DEBUG 2018-12-22 16:25:01,410: 	 Found CMSSW_9_4_6 for slc6_amd64_gcc630 with base /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6
+DEBUG 2018-12-22 16:25:01,410: 	 Making tarball in /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU/inputs/9ebba51e-bead-4188-a070-0cbb46d2612cdefault.tgz
+DEBUG 2018-12-22 16:25:01,444: 	 Checking directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/lib
+DEBUG 2018-12-22 16:25:01,444: 	 Adding directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/lib to tarball
+DEBUG 2018-12-22 16:25:11,665: 	 Checking directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/biglib
+DEBUG 2018-12-22 16:25:11,665: 	 Adding directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/biglib to tarball
+DEBUG 2018-12-22 16:25:11,665: 	 Checking directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/module
+DEBUG 2018-12-22 16:25:12,032: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/DataFormats/interface to tarball
+DEBUG 2018-12-22 16:25:12,214: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/MetaData/data to tarball
+DEBUG 2018-12-22 16:25:30,149: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/MetaData/interface to tarball
+DEBUG 2018-12-22 16:25:30,545: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/MicroAOD/data to tarball
+DEBUG 2018-12-22 16:25:42,375: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/MicroAOD/interface to tarball
+DEBUG 2018-12-22 16:25:42,539: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/Systematics/data to tarball
+DEBUG 2018-12-22 16:25:44,481: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/Systematics/interface to tarball
+DEBUG 2018-12-22 16:25:44,701: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/Taggers/data to tarball
+DEBUG 2018-12-22 16:25:51,371: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/Taggers/interface to tarball
+DEBUG 2018-12-22 16:25:51,604: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/flashgg/Validation/interface to tarball
+DEBUG 2018-12-22 16:25:51,733: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoJets/JetProducers/data to tarball
+DEBUG 2018-12-22 16:25:51,766: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoJets/JetProducers/interface to tarball
+DEBUG 2018-12-22 16:25:52,019: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/CommonTools/UtilAlgos/interface to tarball
+DEBUG 2018-12-22 16:25:52,166: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/CommonTools/RecoUtils/interface to tarball
+DEBUG 2018-12-22 16:25:52,580: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DataFormats/Common/interface to tarball
+DEBUG 2018-12-22 16:25:52,929: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DataFormats/Math/interface to tarball
+DEBUG 2018-12-22 16:25:53,018: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoEgamma/EgammaTools/data to tarball
+DEBUG 2018-12-22 16:25:53,070: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoEgamma/EgammaTools/interface to tarball
+DEBUG 2018-12-22 16:25:53,169: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoEgamma/EgammaPhotonProducers/interface to tarball
+DEBUG 2018-12-22 16:25:53,312: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoEgamma/ElectronIdentification/data to tarball
+DEBUG 2018-12-22 16:25:53,367: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoEgamma/ElectronIdentification/interface to tarball
+DEBUG 2018-12-22 16:25:53,837: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/EgammaAnalysis/ElectronTools/data to tarball
+DEBUG 2018-12-22 16:25:53,907: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/EgammaAnalysis/ElectronTools/interface to tarball
+DEBUG 2018-12-22 16:25:54,038: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/Calibration/HcalCalibAlgos/data to tarball
+DEBUG 2018-12-22 16:25:55,572: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/Calibration/HcalCalibAlgos/interface to tarball
+DEBUG 2018-12-22 16:25:55,683: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQM/Physics/interface to tarball
+DEBUG 2018-12-22 16:25:55,821: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQMOffline/JetMET/interface to tarball
+DEBUG 2018-12-22 16:25:56,050: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQMOffline/L1Trigger/interface to tarball
+DEBUG 2018-12-22 16:25:56,170: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQMOffline/Trigger/data to tarball
+DEBUG 2018-12-22 16:25:56,244: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQMOffline/Trigger/interface to tarball
+DEBUG 2018-12-22 16:25:56,975: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/DQMServices/Examples/interface to tarball
+DEBUG 2018-12-22 16:25:57,066: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/HLTriggerOffline/SUSYBSM/data to tarball
+DEBUG 2018-12-22 16:25:57,089: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/HLTriggerOffline/SUSYBSM/interface to tarball
+DEBUG 2018-12-22 16:25:57,246: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/PhysicsTools/NanoAOD/interface to tarball
+DEBUG 2018-12-22 16:25:57,334: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/PhysicsTools/PatAlgos/interface to tarball
+DEBUG 2018-12-22 16:25:57,824: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/PhysicsTools/PatUtils/data to tarball
+DEBUG 2018-12-22 16:25:58,185: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/PhysicsTools/PatUtils/interface to tarball
+DEBUG 2018-12-22 16:25:58,338: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoBTag/SoftLepton/interface to tarball
+DEBUG 2018-12-22 16:25:58,427: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/RecoHI/HiEgammaAlgos/interface to tarball
+DEBUG 2018-12-22 16:25:58,702: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/GeneratorInterface/RivetInterface/data to tarball
+DEBUG 2018-12-22 16:25:58,737: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/GeneratorInterface/RivetInterface/interface to tarball
+DEBUG 2018-12-22 16:25:59,032: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/work/interface to tarball
+DEBUG 2018-12-22 16:25:59,919: 	 Adding data directory /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/data to tarball
+DEBUG 2018-12-22 16:25:59,920: 	 Adding file input_files/transformation_Moriond17_AfterPreApr_v1.root to tarball
+DEBUG 2018-12-22 16:25:59,957: 	 Adding file input_files/pu_Weights_GluGluHToGG.root to tarball
+DEBUG 2018-12-22 16:25:59,972: 	 Adding file input_files/Run2017_17Nov2017_v1_ele_smearings.dat to tarball
+DEBUG 2018-12-22 16:25:59,974: 	 Adding file input_files/Run2017_17Nov2017_v1_ele_scales.dat to tarball
+DEBUG 2018-12-22 16:26:01,111: 	 Uploading archive /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU/inputs/9ebba51e-bead-4188-a070-0cbb46d2612cdefault.tgz (96 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-12-22 16:26:38,517: 	 Loading required information from the environment
+DEBUG 2018-12-22 16:26:38,517: 	 Found CMSSW_9_4_6 for slc6_amd64_gcc630 with base /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6
+DEBUG 2018-12-22 16:26:38,517: 	 Making tarball in /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU/inputs/debugFiles.tgz
+DEBUG 2018-12-22 16:26:38,547: 	 Uploading archive /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU/inputs/debugFiles.tgz (2 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-12-22 16:26:39,613: 	 Result uploading input files: a52254132b13367857b2ba9f626a505f05132c5becfc5735496d9b2d3773e08d.tar.gz 
+INFO 2018-12-22 16:26:39,613: 	 Sending the request to the server
+DEBUG 2018-12-22 16:26:39,614: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_FNALLPC', 'algoargs': 1, 'cachefilename': 'a52254132b13367857b2ba9f626a505f05132c5becfc5735496d9b2d3773e08d.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_9_4_6', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/sethzenz-RunIIFall17-3_1_0-3_1_0-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1-bb3ce3a7883249660e68d150a2fbef9a/USER', 'lfn': '/store/user/dbhowmik/MHgg/Bkg/newID_rightPUweight/BkgGluGluHtogg_2017MC', 'dryrun': 0, 'workflow': 'crab_GluGluHtogg_newID_rightPU', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 0, 'tfileoutfiles': ['diPhotons.root'], 'oneEventMode': 0, 'debugfilename': '2e170ee8961a4d8a702f51f5da0ea748a50643e4ec60891f3ed9bfb5cb0ce8ce.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc630', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2018-12-22 16:26:39,614: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T3_US_FNALLPC&algoargs=1&cachefilename=a52254132b13367857b2ba9f626a505f05132c5becfc5735496d9b2d3773e08d.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_9_4_6&primarydataset=&inputdata=%2FGluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8%2Fsethzenz-RunIIFall17-3_1_0-3_1_0-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1-bb3ce3a7883249660e68d150a2fbef9a%2FUSER&lfn=%2Fstore%2Fuser%2Fdbhowmik%2FMHgg%2FBkg%2FnewID_rightPUweight%2FBkgGluGluHtogg_2017MC&dryrun=0&workflow=crab_GluGluHtogg_newID_rightPU&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=2e170ee8961a4d8a702f51f5da0ea748a50643e4ec60891f3ed9bfb5cb0ce8ce.tar.gz&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc630&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&tfileoutfiles=diPhotons.root
+DEBUG 2018-12-22 16:26:41,766: 	 Result: {u'result': [{u'RequestName': u'181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU'}]}
+INFO 2018-12-22 16:26:41,775: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2018-12-22 16:26:41,775: 	 Task name: 181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU
+INFO 2018-12-22 16:26:41,775: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2018-12-22 16:26:41,775: 	 About to return
+INFO 2018-12-22 16:26:41,781: 	 Log file is /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU/crab.log
+DEBUG 2018-12-22 16:28:35,919: 	 Executing command: 'status'
+DEBUG 2018-12-22 16:28:35,919: 	 Found CRAB cache file /afs/cern.ch/user/d/dbhowmik/.crab3
+DEBUG 2018-12-22 16:28:35,930: 	 Checking credentials
+DEBUG 2018-12-22 16:28:35,930: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-12-22 16:28:35,931: 	 Getting proxy life time left
+DEBUG 2018-12-22 16:28:36,637: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 42959
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:28:37,244: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 42958
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:28:37,244: 	 Proxy lifetime 42959 secs is different from voms extension lifetime 42958 secs for proxy: /tmp/x509up_u91056
+DEBUG 2018-12-22 16:28:37,244: 	 Proxy valid for 11:55:58 hours
+DEBUG 2018-12-22 16:28:37,361: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:28:37,361: 	 Checking credentials
+DEBUG 2018-12-22 16:28:37,361: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-12-22 16:28:37,362: 	 Getting proxy life time left
+DEBUG 2018-12-22 16:28:37,965: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 42958
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:28:38,576: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 42957
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:28:38,576: 	 Proxy lifetime 42958 secs is different from voms extension lifetime 42957 secs for proxy: /tmp/x509up_u91056
+DEBUG 2018-12-22 16:28:38,576: 	 Proxy valid for 11:55:57 hours
+DEBUG 2018-12-22 16:28:39,532: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2018-12-22 16:28:39,649: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:28:39,649: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-12-22 16:28:39,649: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik_cmsweb.cern.ch for credential name
+DEBUG 2018-12-22 16:28:39,953: 	 Executing : 
+ command : myproxy-info -l c57cbe2bda088bac5d889483f42b8a5058d51971 -s myproxy.cern.ch
+ output : username: c57cbe2bda088bac5d889483f42b8a5058d51971
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 625:44:35  (26.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 16:28:39,954: 	 Myproxy is valid: 2252675
+DEBUG 2018-12-22 16:28:39,954: 	 Command use: status
+DEBUG 2018-12-22 16:28:39,954: 	 Options use: ['--dir', 'crab_GluGluHtogg_newID_rightPU/']
+DEBUG 2018-12-22 16:28:41,010: 	 CRABClient version: 3.3.1812
+DEBUG 2018-12-22 16:28:41,010: 	 Instance is prod
+DEBUG 2018-12-22 16:28:41,010: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-12-22 16:28:41,010: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-12-22 16:28:44,356: 	 Got information from server oracle database: {u'result': [u'181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2018-12-22 15:26:41.757541', u'None', u'2018-12-22 15:27:37.933196', u'None', u'CMSSW_9_4_6', u'slc6_amd64_gcc630', u'/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/sethzenz-RunIIFall17-3_1_0-3_1_0-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1-bb3ce3a7883249660e68d150a2fbef9a/USER', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'a52254132b13367857b2ba9f626a505f05132c5becfc5735496d9b2d3773e08d.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'dbhowmik', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik', u'cms', u'None', u'None', u'crab_GluGluHtogg_newID_rightPU-00000000000000000000000000000000', u'F', u'T3_US_FNALLPC', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['diPhotons.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0144.cern.ch/mon/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0144.cern.ch', u'F', u'[]', u'T', u'/store/user/dbhowmik/MHgg/Bkg/newID_rightPUweight/BkgGluGluHtogg_2017MC', u'F', u'None', u'F', u'None', u'GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8', u'None', u'2e170ee8961a4d8a702f51f5da0ea748a50643e4ec60891f3ed9bfb5cb0ce8ce.tar.gz', u'32749909', u'filetransfers', u'F', u'137.138.150.157', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2018-12-22 16:28:44,357: 	 CRAB project directory:		/afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU
+INFO 2018-12-22 16:28:44,357: 	 Task name:			181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU
+INFO 2018-12-22 16:28:44,357: 	 Grid scheduler - Task Worker:	crab3@vocms0144.cern.ch - crab-prod-tw01
+INFO 2018-12-22 16:28:44,358: 	 Status on the CRAB server:	SUBMITTED
+INFO 2018-12-22 16:28:44,358: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/181222_152641%3Adbhowmik_crab_GluGluHtogg_newID_rightPU
+INFO 2018-12-22 16:28:44,358: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dbhowmik&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=181222_152641%3Adbhowmik_crab_GluGluHtogg_newID_rightPU
+DEBUG 2018-12-22 16:28:44,358: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 32749909)
+DEBUG 2018-12-22 16:28:44,358: 	 Webdir is located at http://vocms0144.cern.ch/mon/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU
+DEBUG 2018-12-22 16:28:47,698: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0144/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU
+DEBUG 2018-12-22 16:28:47,698: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0144/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU/status_cache
+INFO 2018-12-22 16:28:48,647: 	 Waiting for the Grid scheduler to report back the status of your task
+ERROR 2018-12-22 16:28:48,647: 	 Cannot retrieve the status_cache file. Maybe the task process has not run yet? Got:
+url=https://cmsweb.cern.ch/scheddmon/0144/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '364', 'Set-Cookie': 'cms-auth=e008e65134e84f0104a67f315aeed7035f50d43681bd05baa60de4e3aa4b56cf5a4316528152c01a;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.2.15 (Red Hat)', 'Date': 'Sat, 22 Dec 2018 15:28:48 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=60025 t=1545492528586753'}
+ERROR 2018-12-22 16:28:48,647: 	 url=https://cmsweb.cern.ch/scheddmon/0144/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '364', 'Set-Cookie': 'cms-auth=e008e65134e84f0104a67f315aeed7035f50d43681bd05baa60de4e3aa4b56cf5a4316528152c01a;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.2.15 (Red Hat)', 'Date': 'Sat, 22 Dec 2018 15:28:48 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=60025 t=1545492528586753'}
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1812/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 115, in __call__
+    statusCacheData = getDataFromURL(url, self.proxyfilename)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1812/lib/python2.7/site-packages/CRABClient/UserUtilities.py", line 244, in getDataFromURL
+    capath=HTTPRequests.getCACertPath())
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1812/lib/python2.7/site-packages/WMCore/Services/pycurl_manager.py", line 252, in request
+    raise exc
+HTTPException: url=https://cmsweb.cern.ch/scheddmon/0144/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '364', 'Set-Cookie': 'cms-auth=e008e65134e84f0104a67f315aeed7035f50d43681bd05baa60de4e3aa4b56cf5a4316528152c01a;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.2.15 (Red Hat)', 'Date': 'Sat, 22 Dec 2018 15:28:48 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=60025 t=1545492528586753'}
+INFO 2018-12-22 16:28:48,701: 	 Log file is /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU/crab.log
+DEBUG 2018-12-22 22:08:08,269: 	 Executing command: 'status'
+DEBUG 2018-12-22 22:08:08,271: 	 Found CRAB cache file /afs/cern.ch/user/d/dbhowmik/.crab3
+DEBUG 2018-12-22 22:08:08,308: 	 Checking credentials
+DEBUG 2018-12-22 22:08:08,311: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-12-22 22:08:08,311: 	 Getting proxy life time left
+DEBUG 2018-12-22 22:08:09,117: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 43150
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 22:08:09,927: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 43150
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 22:08:09,928: 	 Proxy valid for 11:59:10 hours
+DEBUG 2018-12-22 22:08:10,051: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 22:08:10,051: 	 Checking credentials
+DEBUG 2018-12-22 22:08:10,052: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-12-22 22:08:10,052: 	 Getting proxy life time left
+DEBUG 2018-12-22 22:08:10,858: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 43149
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 22:08:11,667: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 43148
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 22:08:11,667: 	 Proxy lifetime 43149 secs is different from voms extension lifetime 43148 secs for proxy: /tmp/x509up_u91056
+DEBUG 2018-12-22 22:08:11,667: 	 Proxy valid for 11:59:08 hours
+DEBUG 2018-12-22 22:08:13,036: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2018-12-22 22:08:13,150: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 22:08:13,150: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-12-22 22:08:13,151: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik_cmsweb.cern.ch for credential name
+DEBUG 2018-12-22 22:08:13,761: 	 Executing : 
+ command : myproxy-info -l c57cbe2bda088bac5d889483f42b8a5058d51971 -s myproxy.cern.ch
+ output : username: c57cbe2bda088bac5d889483f42b8a5058d51971
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 620:05:01  (25.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-22 22:08:13,762: 	 Myproxy is valid: 2232301
+DEBUG 2018-12-22 22:08:13,762: 	 Command use: status
+DEBUG 2018-12-22 22:08:13,763: 	 Options use: ['--dir', 'crab_GluGluHtogg_newID_rightPU/']
+DEBUG 2018-12-22 22:08:14,613: 	 CRABClient version: 3.3.1812
+DEBUG 2018-12-22 22:08:14,613: 	 Instance is prod
+DEBUG 2018-12-22 22:08:14,613: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-12-22 22:08:14,613: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-12-22 22:08:15,448: 	 Got information from server oracle database: {u'result': [u'181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2018-12-22 15:26:41.757541', u'None', u'2018-12-22 15:27:37.933196', u'None', u'CMSSW_9_4_6', u'slc6_amd64_gcc630', u'/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/sethzenz-RunIIFall17-3_1_0-3_1_0-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1-bb3ce3a7883249660e68d150a2fbef9a/USER', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'a52254132b13367857b2ba9f626a505f05132c5becfc5735496d9b2d3773e08d.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'dbhowmik', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik', u'cms', u'None', u'None', u'crab_GluGluHtogg_newID_rightPU-00000000000000000000000000000000', u'F', u'T3_US_FNALLPC', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['diPhotons.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0144.cern.ch/mon/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0144.cern.ch', u'F', u'[]', u'T', u'/store/user/dbhowmik/MHgg/Bkg/newID_rightPUweight/BkgGluGluHtogg_2017MC', u'F', u'None', u'F', u'None', u'GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8', u'None', u'2e170ee8961a4d8a702f51f5da0ea748a50643e4ec60891f3ed9bfb5cb0ce8ce.tar.gz', u'32749909', u'filetransfers', u'F', u'137.138.150.157', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2018-12-22 22:08:15,449: 	 CRAB project directory:		/afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU
+INFO 2018-12-22 22:08:15,449: 	 Task name:			181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU
+INFO 2018-12-22 22:08:15,449: 	 Grid scheduler - Task Worker:	crab3@vocms0144.cern.ch - crab-prod-tw01
+INFO 2018-12-22 22:08:15,449: 	 Status on the CRAB server:	SUBMITTED
+INFO 2018-12-22 22:08:15,449: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/181222_152641%3Adbhowmik_crab_GluGluHtogg_newID_rightPU
+INFO 2018-12-22 22:08:15,449: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dbhowmik&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=181222_152641%3Adbhowmik_crab_GluGluHtogg_newID_rightPU
+DEBUG 2018-12-22 22:08:15,450: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 32749909)
+DEBUG 2018-12-22 22:08:15,450: 	 Webdir is located at http://vocms0144.cern.ch/mon/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU
+DEBUG 2018-12-22 22:08:16,422: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0144/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU
+DEBUG 2018-12-22 22:08:16,422: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0144/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU/status_cache
+DEBUG 2018-12-22 22:08:17,259: 	 Got information from status cache file: {'24': {'Retries': 0, 'WallDurations': [8.0, 440.0], 'StartTimes': [1545493667.0], 'SubmitTimes': [1545492487.0], 'JobIds': ['32749936.0'], 'EndTimes': [1545494107.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1048520], 'TotalUserCpuTimeHistory': [339], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [21]}, '25': {'Retries': 0, 'WallDurations': [9.0, 661.0], 'StartTimes': [1545493687.0], 'SubmitTimes': [1545492497.0], 'JobIds': ['32749942.0'], 'EndTimes': [1545494348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1485156], 'TotalUserCpuTimeHistory': [493], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [31]}, '20': {'Retries': 0, 'WallDurations': [8.0, 382.0], 'StartTimes': [1545493621.0], 'SubmitTimes': [1545492486.0], 'JobIds': ['32749934.0'], 'EndTimes': [1545494003.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1043996], 'TotalUserCpuTimeHistory': [290], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [21]}, '21': {'Retries': 0, 'WallDurations': [8.0, 411.0], 'StartTimes': [1545493652.0], 'SubmitTimes': [1545492486.0], 'JobIds': ['32749935.0'], 'EndTimes': [1545494063.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1130288], 'TotalUserCpuTimeHistory': [299], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [22]}, '22': {'Retries': 0, 'WallDurations': [8.0, 571.0], 'StartTimes': [1545493681.0], 'SubmitTimes': [1545492488.0], 'JobIds': ['32749937.0'], 'EndTimes': [1545494252.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1053708], 'TotalUserCpuTimeHistory': [443], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [30]}, '23': {'Retries': 0, 'WallDurations': [9.0, 470.0], 'StartTimes': [1545493691.0], 'SubmitTimes': [1545492490.0], 'JobIds': ['32749939.0'], 'EndTimes': [1545494161.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1049868], 'TotalUserCpuTimeHistory': [323], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [22]}, '1': {'Retries': 0, 'WallDurations': [8.0, 455.0], 'StartTimes': [1545495644.0], 'SubmitTimes': [1545492473.0], 'JobIds': ['32749914.0'], 'EndTimes': [1545496099.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [945372], 'TotalUserCpuTimeHistory': [343], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [21]}, '3': {'Retries': 0, 'WallDurations': [8.0, 573.0], 'StartTimes': [1545495743.0], 'SubmitTimes': [1545492473.0], 'JobIds': ['32749915.0'], 'EndTimes': [1545496316.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [972460], 'TotalUserCpuTimeHistory': [455], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [27]}, '2': {'Retries': 0, 'WallDurations': [8.0, 406.0], 'StartTimes': [1545493239.0], 'SubmitTimes': [1545492467.0], 'JobIds': ['32749912.0'], 'EndTimes': [1545493645.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1058168], 'TotalUserCpuTimeHistory': [281], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [17]}, '5': {'Retries': 0, 'WallDurations': [9.0, 417.0], 'StartTimes': [1545495766.0], 'SubmitTimes': [1545492473.0], 'JobIds': ['32749917.0'], 'EndTimes': [1545496183.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1101856], 'TotalUserCpuTimeHistory': [334], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [19]}, '4': {'Retries': 0, 'WallDurations': [8.0, 695.0], 'StartTimes': [1545495754.0], 'SubmitTimes': [1545492473.0], 'JobIds': ['32749916.0'], 'EndTimes': [1545496449.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1420680], 'TotalUserCpuTimeHistory': [518], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [34]}, '7': {'Retries': 0, 'WallDurations': [8.0, 584.0], 'StartTimes': [1545493241.0], 'SubmitTimes': [1545492474.0], 'JobIds': ['32749919.0'], 'EndTimes': [1545493825.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [841640], 'TotalUserCpuTimeHistory': [400], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [24]}, '6': {'Retries': 0, 'WallDurations': [8.0, 487.0], 'StartTimes': [1545493236.0], 'SubmitTimes': [1545492474.0], 'JobIds': ['32749918.0'], 'EndTimes': [1545493723.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [970496], 'TotalUserCpuTimeHistory': [344], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [22]}, '9': {'Retries': 0, 'WallDurations': [8.0, 349.0], 'StartTimes': [1545493239.0], 'SubmitTimes': [1545492474.0], 'JobIds': ['32749921.0'], 'EndTimes': [1545493588.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1092088], 'TotalUserCpuTimeHistory': [258], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [15]}, '8': {'Retries': 0, 'WallDurations': [8.0, 484.0], 'StartTimes': [1545493239.0], 'SubmitTimes': [1545492474.0], 'JobIds': ['32749920.0'], 'EndTimes': [1545493723.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1050344], 'TotalUserCpuTimeHistory': [385], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [23]}, '11': {'Retries': 0, 'WallDurations': [8.0, 514.0], 'StartTimes': [1545493243.0], 'SubmitTimes': [1545492475.0], 'JobIds': ['32749923.0'], 'EndTimes': [1545493757.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [979180], 'TotalUserCpuTimeHistory': [354], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [22]}, '10': {'Retries': 0, 'WallDurations': [8.0, 511.0], 'StartTimes': [1545493236.0], 'SubmitTimes': [1545492475.0], 'JobIds': ['32749922.0'], 'EndTimes': [1545493747.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1108176], 'TotalUserCpuTimeHistory': [403], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [27]}, '13': {'Retries': 0, 'WallDurations': [8.0, 518.0], 'StartTimes': [1545493241.0], 'SubmitTimes': [1545492484.0], 'JobIds': ['32749930.0'], 'EndTimes': [1545493759.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1107552], 'TotalUserCpuTimeHistory': [394], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [24]}, '12': {'Retries': 0, 'WallDurations': [9.0, 751.0], 'StartTimes': [1545493240.0], 'SubmitTimes': [1545492476.0], 'JobIds': ['32749925.0'], 'EndTimes': [1545493991.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1366672], 'TotalUserCpuTimeHistory': [518], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [32]}, '15': {'Retries': 0, 'WallDurations': [9.0, 398.0], 'StartTimes': [1545493591.0], 'SubmitTimes': [1545492486.0], 'JobIds': ['32749933.0'], 'EndTimes': [1545493989.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1025208], 'TotalUserCpuTimeHistory': [314], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [19]}, '14': {'Retries': 0, 'WallDurations': [8.0, 423.0], 'StartTimes': [1545493239.0], 'SubmitTimes': [1545492476.0], 'JobIds': ['32749926.0'], 'EndTimes': [1545493662.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1039256], 'TotalUserCpuTimeHistory': [320], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [19]}, '17': {'Retries': 0, 'WallDurations': [9.0, 739.0], 'StartTimes': [1545493241.0], 'SubmitTimes': [1545492479.0], 'JobIds': ['32749928.0'], 'EndTimes': [1545493980.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1310036], 'TotalUserCpuTimeHistory': [527], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [34]}, '16': {'Retries': 0, 'WallDurations': [9.0, 483.0], 'StartTimes': [1545493241.0], 'SubmitTimes': [1545492477.0], 'JobIds': ['32749927.0'], 'EndTimes': [1545493724.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [909916], 'TotalUserCpuTimeHistory': [325], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [20]}, '19': {'Retries': 0, 'WallDurations': [9.0, 396.0], 'StartTimes': [1545493588.0], 'SubmitTimes': [1545492485.0], 'JobIds': ['32749932.0'], 'EndTimes': [1545493984.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1119208], 'TotalUserCpuTimeHistory': [303], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [20]}, '18': {'Retries': 0, 'WallDurations': [9.0, 375.0], 'StartTimes': [1545493243.0], 'SubmitTimes': [1545492485.0], 'JobIds': ['32749931.0'], 'EndTimes': [1545493618.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1121364], 'TotalUserCpuTimeHistory': [289], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [19]}}
+INFO 2018-12-22 22:08:17,260: 	 Status on the scheduler:	SUBMITTED
+INFO 2018-12-22 22:08:17,260: 	 
+Jobs status:                    transferring  		 100.0% (25/25)
+INFO 2018-12-22 22:08:17,260: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2018-12-22 22:08:17,261: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2018-12-22 22:08:17,261: 	 
+Summary of run jobs:
+ * Memory: 1450MB min, 1450MB max, 1068MB ave
+ * Runtime: 0:05:49 min, 0:12:31 max, 0:08:19 ave
+ * CPU eff: 71% min, 85% max, 79% ave
+ * Waste: 0:03:29 (2% of total)
+
+INFO 2018-12-22 22:08:17,329: 	 Log file is /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU/crab.log
+DEBUG 2018-12-26 10:07:39,417: 	 Executing command: 'status'
+DEBUG 2018-12-26 10:07:39,419: 	 Found CRAB cache file /afs/cern.ch/user/d/dbhowmik/.crab3
+DEBUG 2018-12-26 10:07:39,492: 	 Checking credentials
+DEBUG 2018-12-26 10:07:39,494: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-12-26 10:07:39,494: 	 Getting proxy life time left
+DEBUG 2018-12-26 10:07:40,300: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 43188
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-26 10:07:41,108: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 43187
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-26 10:07:41,108: 	 Proxy lifetime 43188 secs is different from voms extension lifetime 43187 secs for proxy: /tmp/x509up_u91056
+DEBUG 2018-12-26 10:07:41,108: 	 Proxy valid for 11:59:47 hours
+DEBUG 2018-12-26 10:07:41,231: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-26 10:07:41,231: 	 Checking credentials
+DEBUG 2018-12-26 10:07:41,231: 	 Found proxy file /tmp/x509up_u91056
+DEBUG 2018-12-26 10:07:41,231: 	 Getting proxy life time left
+DEBUG 2018-12-26 10:07:41,939: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -timeleft
+ output : 43187
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-26 10:07:42,747: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u91056 -actimeleft
+ output : 43186
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-26 10:07:42,747: 	 Proxy lifetime 43187 secs is different from voms extension lifetime 43186 secs for proxy: /tmp/x509up_u91056
+DEBUG 2018-12-26 10:07:42,747: 	 Proxy valid for 11:59:46 hours
+DEBUG 2018-12-26 10:07:43,703: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2018-12-26 10:07:43,815: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-26 10:07:43,815: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-12-26 10:07:43,816: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik_cmsweb.cern.ch for credential name
+DEBUG 2018-12-26 10:07:44,222: 	 Executing : 
+ command : myproxy-info -l c57cbe2bda088bac5d889483f42b8a5058d51971 -s myproxy.cern.ch
+ output : username: c57cbe2bda088bac5d889483f42b8a5058d51971
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 536:05:30  (22.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-12-26 10:07:44,223: 	 Myproxy is valid: 1929930
+DEBUG 2018-12-26 10:07:44,223: 	 Command use: status
+DEBUG 2018-12-26 10:07:44,223: 	 Options use: ['--dir', 'crab_GluGluHtogg_newID_rightPU/']
+DEBUG 2018-12-26 10:07:45,087: 	 CRABClient version: 3.3.1812
+DEBUG 2018-12-26 10:07:45,087: 	 Instance is prod
+DEBUG 2018-12-26 10:07:45,087: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-12-26 10:07:45,087: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-12-26 10:07:46,066: 	 Got information from server oracle database: {u'result': [u'181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2018-12-22 15:26:41.757541', u'None', u'2018-12-22 15:27:37.933196', u'None', u'CMSSW_9_4_6', u'slc6_amd64_gcc630', u'/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/sethzenz-RunIIFall17-3_1_0-3_1_0-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1-bb3ce3a7883249660e68d150a2fbef9a/USER', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'a52254132b13367857b2ba9f626a505f05132c5becfc5735496d9b2d3773e08d.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'dbhowmik', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dbhowmik/CN=790520/CN=Debabrata Bhowmik', u'cms', u'None', u'None', u'crab_GluGluHtogg_newID_rightPU-00000000000000000000000000000000', u'F', u'T3_US_FNALLPC', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['diPhotons.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0144.cern.ch/mon/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0144.cern.ch', u'F', u'[]', u'T', u'/store/user/dbhowmik/MHgg/Bkg/newID_rightPUweight/BkgGluGluHtogg_2017MC', u'F', u'None', u'F', u'None', u'GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8', u'None', u'2e170ee8961a4d8a702f51f5da0ea748a50643e4ec60891f3ed9bfb5cb0ce8ce.tar.gz', u'32749909', u'filetransfers', u'F', u'137.138.150.157', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2018-12-26 10:07:46,067: 	 CRAB project directory:		/afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU
+INFO 2018-12-26 10:07:46,067: 	 Task name:			181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU
+INFO 2018-12-26 10:07:46,067: 	 Grid scheduler - Task Worker:	crab3@vocms0144.cern.ch - crab-prod-tw01
+INFO 2018-12-26 10:07:46,067: 	 Status on the CRAB server:	SUBMITTED
+INFO 2018-12-26 10:07:46,067: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/181222_152641%3Adbhowmik_crab_GluGluHtogg_newID_rightPU
+INFO 2018-12-26 10:07:46,067: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dbhowmik&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=181222_152641%3Adbhowmik_crab_GluGluHtogg_newID_rightPU
+DEBUG 2018-12-26 10:07:46,067: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 32749909)
+DEBUG 2018-12-26 10:07:46,067: 	 Webdir is located at http://vocms0144.cern.ch/mon/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU
+DEBUG 2018-12-26 10:07:46,983: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0144/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU
+DEBUG 2018-12-26 10:07:46,983: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0144/cms1153/181222_152641:dbhowmik_crab_GluGluHtogg_newID_rightPU/status_cache
+DEBUG 2018-12-26 10:07:48,289: 	 Got information from status cache file: {'24': {'Retries': 0, 'WallDurations': [8.0, 440.0], 'StartTimes': [1545493667.0], 'SubmitTimes': [1545492487.0], 'JobIds': ['32749936.0'], 'EndTimes': [1545494107.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1048520], 'TotalUserCpuTimeHistory': [339], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [21]}, '25': {'Retries': 0, 'WallDurations': [9.0, 661.0], 'StartTimes': [1545493687.0], 'SubmitTimes': [1545492497.0], 'JobIds': ['32749942.0'], 'EndTimes': [1545494348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1485156], 'TotalUserCpuTimeHistory': [493], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [31]}, '20': {'Retries': 0, 'WallDurations': [8.0, 382.0], 'StartTimes': [1545493621.0], 'SubmitTimes': [1545492486.0], 'JobIds': ['32749934.0'], 'EndTimes': [1545494003.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1043996], 'TotalUserCpuTimeHistory': [290], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [21]}, '21': {'Retries': 0, 'WallDurations': [8.0, 411.0], 'StartTimes': [1545493652.0], 'SubmitTimes': [1545492486.0], 'JobIds': ['32749935.0'], 'EndTimes': [1545494063.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1130288], 'TotalUserCpuTimeHistory': [299], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [22]}, '22': {'Retries': 0, 'WallDurations': [8.0, 571.0], 'StartTimes': [1545493681.0], 'SubmitTimes': [1545492488.0], 'JobIds': ['32749937.0'], 'EndTimes': [1545494252.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1053708], 'TotalUserCpuTimeHistory': [443], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [30]}, '23': {'Retries': 0, 'WallDurations': [9.0, 470.0], 'StartTimes': [1545493691.0], 'SubmitTimes': [1545492490.0], 'JobIds': ['32749939.0'], 'EndTimes': [1545494161.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1049868], 'TotalUserCpuTimeHistory': [323], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [22]}, '1': {'Retries': 1, 'WallDurations': [8.0, 455.0, 0, 422.0], 'StartTimes': [1545495644.0, 1545517448.0], 'SubmitTimes': [1545492473.0, 1545515998.0], 'JobIds': ['32749914.0', '32761002.0'], 'EndTimes': [1545496099.0, 1545517870.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [945372, 1081596], 'TotalUserCpuTimeHistory': [343, 339], 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [21, 21]}, '3': {'Retries': 0, 'WallDurations': [8.0, 573.0], 'StartTimes': [1545495743.0], 'SubmitTimes': [1545492473.0], 'JobIds': ['32749915.0'], 'EndTimes': [1545496316.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [972460], 'TotalUserCpuTimeHistory': [455], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [27]}, '2': {'Retries': 0, 'WallDurations': [8.0, 406.0], 'StartTimes': [1545493239.0], 'SubmitTimes': [1545492467.0], 'JobIds': ['32749912.0'], 'EndTimes': [1545493645.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1058168], 'TotalUserCpuTimeHistory': [281], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [17]}, '5': {'Retries': 0, 'WallDurations': [9.0, 417.0], 'StartTimes': [1545495766.0], 'SubmitTimes': [1545492473.0], 'JobIds': ['32749917.0'], 'EndTimes': [1545496183.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1101856], 'TotalUserCpuTimeHistory': [334], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [19]}, '4': {'Retries': 0, 'WallDurations': [8.0, 695.0], 'StartTimes': [1545495754.0], 'SubmitTimes': [1545492473.0], 'JobIds': ['32749916.0'], 'EndTimes': [1545496449.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1420680], 'TotalUserCpuTimeHistory': [518], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [34]}, '7': {'Retries': 0, 'WallDurations': [8.0, 584.0], 'StartTimes': [1545493241.0], 'SubmitTimes': [1545492474.0], 'JobIds': ['32749919.0'], 'EndTimes': [1545493825.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [841640], 'TotalUserCpuTimeHistory': [400], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [24]}, '6': {'Retries': 0, 'WallDurations': [8.0, 487.0], 'StartTimes': [1545493236.0], 'SubmitTimes': [1545492474.0], 'JobIds': ['32749918.0'], 'EndTimes': [1545493723.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [970496], 'TotalUserCpuTimeHistory': [344], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [22]}, '9': {'Retries': 0, 'WallDurations': [8.0, 349.0], 'StartTimes': [1545493239.0], 'SubmitTimes': [1545492474.0], 'JobIds': ['32749921.0'], 'EndTimes': [1545493588.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1092088], 'TotalUserCpuTimeHistory': [258], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [15]}, '8': {'Retries': 0, 'WallDurations': [8.0, 484.0], 'StartTimes': [1545493239.0], 'SubmitTimes': [1545492474.0], 'JobIds': ['32749920.0'], 'EndTimes': [1545493723.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1050344], 'TotalUserCpuTimeHistory': [385], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [23]}, '11': {'Retries': 0, 'WallDurations': [8.0, 514.0], 'StartTimes': [1545493243.0], 'SubmitTimes': [1545492475.0], 'JobIds': ['32749923.0'], 'EndTimes': [1545493757.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [979180], 'TotalUserCpuTimeHistory': [354], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [22]}, '10': {'Retries': 0, 'WallDurations': [8.0, 511.0], 'StartTimes': [1545493236.0], 'SubmitTimes': [1545492475.0], 'JobIds': ['32749922.0'], 'EndTimes': [1545493747.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1108176], 'TotalUserCpuTimeHistory': [403], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [27]}, '13': {'Retries': 0, 'WallDurations': [8.0, 518.0], 'StartTimes': [1545493241.0], 'SubmitTimes': [1545492484.0], 'JobIds': ['32749930.0'], 'EndTimes': [1545493759.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1107552], 'TotalUserCpuTimeHistory': [394], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [24]}, '12': {'Retries': 0, 'WallDurations': [9.0, 751.0], 'StartTimes': [1545493240.0], 'SubmitTimes': [1545492476.0], 'JobIds': ['32749925.0'], 'EndTimes': [1545493991.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1366672], 'TotalUserCpuTimeHistory': [518], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [32]}, '15': {'Retries': 0, 'WallDurations': [9.0, 398.0], 'StartTimes': [1545493591.0], 'SubmitTimes': [1545492486.0], 'JobIds': ['32749933.0'], 'EndTimes': [1545493989.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1025208], 'TotalUserCpuTimeHistory': [314], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [19]}, '14': {'Retries': 0, 'WallDurations': [8.0, 423.0], 'StartTimes': [1545493239.0], 'SubmitTimes': [1545492476.0], 'JobIds': ['32749926.0'], 'EndTimes': [1545493662.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1039256], 'TotalUserCpuTimeHistory': [320], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [19]}, '17': {'Retries': 0, 'WallDurations': [9.0, 739.0], 'StartTimes': [1545493241.0], 'SubmitTimes': [1545492479.0], 'JobIds': ['32749928.0'], 'EndTimes': [1545493980.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1310036], 'TotalUserCpuTimeHistory': [527], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [34]}, '16': {'Retries': 0, 'WallDurations': [9.0, 483.0], 'StartTimes': [1545493241.0], 'SubmitTimes': [1545492477.0], 'JobIds': ['32749927.0'], 'EndTimes': [1545493724.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [909916], 'TotalUserCpuTimeHistory': [325], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [20]}, '19': {'Retries': 0, 'WallDurations': [9.0, 396.0], 'StartTimes': [1545493588.0], 'SubmitTimes': [1545492485.0], 'JobIds': ['32749932.0'], 'EndTimes': [1545493984.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1119208], 'TotalUserCpuTimeHistory': [303], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [20]}, '18': {'Retries': 2, 'WallDurations': [9.0, 375.0, 9.0, 332.0, 8.0, 556.0], 'StartTimes': [1545493243.0, 1545540580.0, 1545561115.0], 'SubmitTimes': [1545492485.0, 1545540549.0, 1545560879.0], 'JobIds': ['32749931.0', '32774561.0', '32782274.0'], 'EndTimes': [1545493618.0, 1545540912.0, 1545561671.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1121364, 1223140, 894268], 'TotalUserCpuTimeHistory': [289, 251, 359], 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'Unknown', 'T2_CH_CERN', 'Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [19, 17, 22]}}
+INFO 2018-12-26 10:07:48,289: 	 Status on the scheduler:	COMPLETED
+INFO 2018-12-26 10:07:48,289: 	 
+Jobs status:                    finished      		 100.0% (25/25)
+INFO 2018-12-26 10:07:48,289: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2018-12-26 10:07:48,290: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2018-12-26 10:07:48,292: 	 
+Summary of run jobs:
+ * Memory: 1450MB min, 1450MB max, 1065MB ave
+ * Runtime: 0:05:49 min, 0:12:31 max, 0:08:25 ave
+ * CPU eff: 69% min, 85% max, 78% ave
+ * Waste: 0:23:08 (10% of total)
+
+INFO 2018-12-26 10:07:48,346: 	 Log file is /afs/cern.ch/work/d/dbhowmik/public/Analysis/MHgg/2017Analysis/CMSSW_9_4_6/src/MonoHiggsToGG/analysis/test/MC/GluGluHtogg/crab_GluGluHtogg_newID_rightPU/crab.log
